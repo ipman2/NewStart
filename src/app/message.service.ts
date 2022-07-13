@@ -9,6 +9,14 @@ export class MessageService {
     }
 
     clear() {
-        if (window.confirm(`Do you really want to clear all?`)) { this.messages = []; }
+        if (window.confirm(`Do you really want to clear all?`)) {
+            this.messages = [];
+        }
+    }
+
+    clearBatch(count: number) {
+        if (window.confirm(`Do you really want to clear the top ${count} messages?`)) {
+            this.messages = this.messages.slice(count);
+        }
     }
 }
