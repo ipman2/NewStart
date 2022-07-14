@@ -10,11 +10,6 @@
 a {
   text-decoration: none;
 }
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 h3 {
   text-align: center; margin-bottom: 0;
 }
@@ -50,17 +45,23 @@ h4 {
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px){
+  .grid {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
   .module {
     font-size: 10px;
-    max-height: 75px; }
+    max-height: 75px;
+  }
 }
-@media (max-width: 850px) {
+@media (min-width: 992px) {
   .grid {
     margin: 0;
     flex-wrap: unset;
   }
   .module {
-    min-width: 60px;
+    min-width: 50px;
+    flex: 1 4;
   }
 }
