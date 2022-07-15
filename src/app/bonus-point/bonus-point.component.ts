@@ -11,23 +11,22 @@ import { tap } from 'rxjs/operators';
 export class BonusPointComponent implements OnInit {
 
   constructor(
-    private bsJs1Service: BsJs1Service,
+      private bsJs1Service: BsJs1Service,
   ) { }
-
   ngOnInit() {
 
   }
 
   redirectToKeiPage() {
-    location.href = `${location.protocol}//kei.careline.localhost:${location.port}/bonusPoint`
+    location.href = `${location.protocol}//kei.${location.host}/bonusPoint`
   }
 
   redirectToAnnPage() {
-    location.href = `${location.protocol}//ann.careline.localhost:${location.port}/bonusPoint`
+    location.href = `${location.protocol}//ann.${location.host}/bonusPoint`
   }
 
   answerCookie1() {
-    //ToDo..
+    document.cookie = `Key=c1; SameSite=None; Secure; domain=${location.hostname}; path=/bonusPoint`;
   }
 
   answerRxjs1() {
@@ -51,12 +50,12 @@ export class BonusPointComponent implements OnInit {
       .forEachChilds((child) => {
         result += child.value + ` , `;
         const parent = String(child.parent.value);
-        if (result.includes(parent)) result = result.replace(parent + ' , ', '')
+        if (result.includes(parent)) result = result.replace(parent + ' , ', '');
         result += parent + ` , `;
       });
 
     // 預期alert的結果 => js 1 answer : child_1_1 , child_1_2 , parent_1 , child_2_1 ,  parent_2 ,child_3_1 , child_3_2 , child_3_3 , parent_3
-    alert(`js 1 answer : ${result.trim().replace(/,\s*$/, "")}`)
+    alert(`js 1 answer : ${result.trim().replace(/,\s*$/, "")}`);
   }
 
 }

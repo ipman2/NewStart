@@ -70,7 +70,10 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular.io-example:build"
+            "browserTarget": "angular.io-example:build",
+            "disableHostCheck": false,
+            "host": "careline.localhost",
+            "port": 4200
           },
           "configurations": {
             "production": {
