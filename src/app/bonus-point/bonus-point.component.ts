@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsJs1Service } from './bs-js1.service';
 import { concat, of } from 'rxjs';
-import { first, mergeAll, tap } from 'rxjs/operators';
+import { concatAll, first, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-bonus-point',
@@ -41,7 +41,7 @@ export class BonusPointComponent implements OnInit {
     //  second
     //  third
 
-    of(first$.pipe(first()), second$.pipe(first()), third$.pipe(first())).pipe(mergeAll()).subscribe();
+    of(first$.pipe(first()), second$.pipe(first()), third$.pipe(first())).pipe(concatAll()).subscribe();
   }
 
 
