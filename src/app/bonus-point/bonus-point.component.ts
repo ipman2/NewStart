@@ -12,6 +12,7 @@ export class BonusPointComponent implements OnInit {
 
   constructor(private bsJs1Service: BsJs1Service) { }
   flexboxes = Array(9).fill(`f`);
+  grids = Array(7).fill(`g`);
   ngOnInit() {
 
   }

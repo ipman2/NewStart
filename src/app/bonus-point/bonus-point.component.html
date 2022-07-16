@@ -1,4 +1,4 @@
-<p class="page-title">凱萊前端-加分題(可在下方挑選，想做的題目)</p>
+<p class="page-title" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">凱萊前端-加分題(可在下方挑選，想做的題目)</p>
 
 <section>
     <p class="title">題目 : 請用Css FlexBox建立示意圖的9宮格</p>
@@ -14,8 +14,8 @@
     <p class="keyword">你的實作結果:</p>
     <br/>
     <div id="square">
-        <abbr *ngFor="let f of flexboxes; index as i" id="flexbox">
-            {{ i !== 4 ? f + (i + 1) : '' }}
+        <abbr *ngFor="let cell of flexboxes; index as i" class="flexbox">
+            {{ i !== 4 ? cell + (i + 1) : '' }}
         </abbr>
     </div>
     <br/>
@@ -32,10 +32,8 @@
     </div>
     <p class="keyword">你的實作結果:</p>
     <br/>
-    <div *ngFor="let f of flexboxes; index as i">
-        <b *ngIf="i !== 4">
-            {{ f + (i + 1) }}
-        </b>
+    <div id="rect">
+        <abbr *ngFor="let cell of grids; index as i" class="grid" id="{{cell + (i + 1)}}">{{cell + (i + 1)}}</abbr>
     </div>
     <br/>
 </section>

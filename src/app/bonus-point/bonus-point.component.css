@@ -20,7 +20,7 @@ img {
   height: 594px;
   width: 610px;
 }
-#flexbox {
+.flexbox {
   width: 32%;
   position: relative;
   border: #999 solid 2px;
@@ -28,4 +28,26 @@ img {
   text-align: center;
   padding: 60px 0;
   font-size: 70px;
+}
+.grid {
+  border: #D0D0D0 solid 2px;
+  color: #8C8C8C;
+  text-align: center;
+  font-size: 200%;
+  padding: 30px 0;
+}
+#g1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding: 84px 0;
+}
+#g7 {
+  grid-column: span 2;
+}
+#rect {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
