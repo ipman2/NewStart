@@ -14,3 +14,18 @@
 img {
   max-width: 100%;
 }
+#square {
+  display: flex;
+  flex-wrap: wrap;
+  height: 594px;
+  width: 610px;
+}
+#flexbox {
+  width: 32%;
+  position: relative;
+  border: #999 solid 2px;
+  color: #888;
+  text-align: center;
+  padding: 60px 0;
+  font-size: 70px;
+}

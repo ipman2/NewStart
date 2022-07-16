@@ -10,10 +10,11 @@ import { first, mergeAll, tap } from 'rxjs/operators';
 })
 export class BonusPointComponent implements OnInit {
 
-  constructor(
-      private bsJs1Service: BsJs1Service,
-  ) { }
-  ngOnInit() { }
+  constructor(private bsJs1Service: BsJs1Service) { }
+  flexboxes = Array(9).fill(`f`);
+  ngOnInit() {
+
+  }
 
   redirectToKeiPage() {
     location.href = `${location.protocol}//kei.${location.host}/bonusPoint`

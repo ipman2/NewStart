@@ -1,89 +1,99 @@
 <p class="page-title">凱萊前端-加分題(可在下方挑選，想做的題目)</p>
 
 <section>
-  <p class="title">題目 : 請用Css FlexBox建立示意圖的9宮格</p>
-  <p class="keyword">考題限制:</p>
-  <ul class="keyword">
-    <li>每一格的Width、Height需為200px</li>
-    <li>所以9宮格的大小會是: 600 * 600</li>
-  </ul>
-  <div class="preview-img">
-    <p>示意圖:</p>
-    <img src="assets/imgs/flex-9-grid-cell-sample.png" alt="">
-  </div>
-  <p class="keyword">你的實作結果:</p>
-  <br/>
-  <br/>
+    <p class="title">題目 : 請用Css FlexBox建立示意圖的9宮格</p>
+    <p class="keyword">考題限制:</p>
+    <ul class="keyword">
+        <li>每一格的Width、Height需為200px</li>
+        <li>所以9宮格的大小會是: 600 * 600</li>
+    </ul>
+    <div class="preview-img">
+        <p>示意圖:</p>
+        <img src="assets/imgs/flex-9-grid-cell-sample.png" alt="">
+    </div>
+    <p class="keyword">你的實作結果:</p>
+    <br/>
+    <div id="square">
+        <abbr *ngFor="let f of flexboxes; index as i" id="flexbox">
+            {{ i !== 4 ? f + (i + 1) : '' }}
+        </abbr>
+    </div>
+    <br/>
 </section>
 <hr/>
 <br/>
 <br/>
 <br/>
 <section>
-  <p class="title">題目 : 請用Css Grid建立示意圖的內容</p>
-  <div class="preview-img">
-    <p>示意圖:</p>
-    <img src="assets/imgs/grid-colum-row-span-sample.png" alt="">
-  </div>
-  <p class="keyword">你的實作結果:</p>
-  <br/>
-  <br/>
+    <p class="title">題目 : 請用Css Grid建立示意圖的內容</p>
+    <div class="preview-img">
+        <p>示意圖:</p>
+        <img src="assets/imgs/grid-colum-row-span-sample.png" alt="">
+    </div>
+    <p class="keyword">你的實作結果:</p>
+    <br/>
+    <div *ngFor="let f of flexboxes; index as i">
+        <b *ngIf="i !== 4">
+            {{ f + (i + 1) }}
+        </b>
+    </div>
+    <br/>
 </section>
 <hr/>
 <br/>
 <br/>
 <br/>
 <section>
-  <p class="title">題目 : 資料處理</p>
-  <p>情境 : 今天從API取得了一些資料，但我們需要自行轉換成頁面需要的資料格式:</p>
-  <p>請至bonus-point.component.ts裡的answerJs1()，實作你的解決方案</p>
-  <br/>
-  <button class="keyword" (click)="answerJs1()">你的實作結果</button>
-  <br/>
-  <br/>
+    <p class="title">題目 : 資料處理</p>
+    <p>情境 : 今天從API取得了一些資料，但我們需要自行轉換成頁面需要的資料格式:</p>
+    <p>請至bonus-point.component.ts裡的answerJs1()，實作你的解決方案</p>
+    <br/>
+    <button class="keyword" (click)="answerJs1()">你的實作結果</button>
+    <br/>
+    <br/>
 </section>
 <hr/>
 <br/>
 <br/>
 <br/>
 <section>
-  <p class="title">題目 : 共用Cookie</p>
-  <p>情境 : 請自行新增一個Cookie(Key:ck1)，並在以下兩個不同的URL下共用相同的Cookie:</p>
-  <ul>
-    <li>
-      kei.careline.host/bonusPoint
-      <button class="keyword" (click)="redirectToKeiPage()">前往kei的網站</button>
-    </li>
-    <li>
-      ann.careline.host/bonusPoint
-      <button class="keyword" (click)="redirectToAnnPage()">前往ann的網站</button>
-    </li>
-  </ul>
-  <p>請至bonus-point.component.ts裡的answerCookie1()，實作你的解決方案</p>
-  <p class="keyword">考題限制:</p>
-  <ul class="keyword">
-    <li>只能自行新增一個Cookie</li>
-  </ul>
-  <br/>
-  <br/>
-  <button class="keyword" (click)="answerCookie1()">你的實作方式</button>
-  <br/>
-  <br/>
+    <p class="title">題目 : 共用Cookie</p>
+    <p>情境 : 請自行新增一個Cookie(Key:ck1)，並在以下兩個不同的URL下共用相同的Cookie:</p>
+    <ul>
+        <li>
+            kei.careline.host/bonusPoint
+            <button class="keyword" (click)="redirectToKeiPage()">前往kei的網站</button>
+        </li>
+        <li>
+            ann.careline.host/bonusPoint
+            <button class="keyword" (click)="redirectToAnnPage()">前往ann的網站</button>
+        </li>
+    </ul>
+    <p>請至bonus-point.component.ts裡的answerCookie1()，實作你的解決方案</p>
+    <p class="keyword">考題限制:</p>
+    <ul class="keyword">
+        <li>只能自行新增一個Cookie</li>
+    </ul>
+    <br/>
+    <br/>
+    <button class="keyword" (click)="answerCookie1()">你的實作方式</button>
+    <br/>
+    <br/>
 </section>
 <hr/>
 <br/>
 <br/>
 <br/>
 <section>
-  <p class="title">題目 : Rxjs</p>
-  <p>情境 : API的執行是有順序性的，需等上一個API取得Http Repsonse，才能進行下一個Http Request</p>
-  <p>請至bonus-point.component.ts裡的answerRxjs1()，實作你的解決方案</p>
-  <div class="preview-img">
-    <img src="assets/imgs/rxjs1.png" alt="">
-  </div>
-  <br/>
-  <br/>
-  <button class="keyword" (click)="answerRxjs1()">你的實作方式</button>
-  <br/>
-  <br/>
+    <p class="title">題目 : Rxjs</p>
+    <p>情境 : API的執行是有順序性的，需等上一個API取得Http Repsonse，才能進行下一個Http Request</p>
+    <p>請至bonus-point.component.ts裡的answerRxjs1()，實作你的解決方案</p>
+    <div class="preview-img">
+        <img src="assets/imgs/rxjs1.png" alt="">
+    </div>
+    <br/>
+    <br/>
+    <button class="keyword" (click)="answerRxjs1()">你的實作方式</button>
+    <br/>
+    <br/>
 </section>
