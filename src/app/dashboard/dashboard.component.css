@@ -51,17 +51,23 @@ h4 {
     flex-wrap: wrap;
   }
   .module {
-    font-size: 10px;
-    max-height: 75px;
+    font-size: 17px;
+    padding: 5px;
   }
 }
 @media (min-width: 992px) {
   .grid {
-    margin: 0;
     flex-wrap: unset;
   }
   .module {
-    min-width: 50px;
     flex: 1 4;
+  }
+  .col {
+    padding: 5px;
+    width: 150px;
+    min-width: 20vw;
+  }
+  .hero {
+    padding: 20px 0;
   }
 }
