@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router'
 
+if (!location.hostname.includes('careline.')) location.href = `${location.protocol}//careline.${location.host}`;
 const routes: Routes = [
     {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
     {
