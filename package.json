@@ -6,6 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "yarn dev:frontend & node ./src/backend/Server.ts && fg",
+    "start:powershell": "Start-Job -ScriptBlock {yarn dev:frontend} && node .\\src\\backend\\Server.ts",
     "dev:frontend" : "ng serve --host careline.localhost",
     "dev:backend" : "node ./src/backend/Server.ts",
     "build": "ng build",
